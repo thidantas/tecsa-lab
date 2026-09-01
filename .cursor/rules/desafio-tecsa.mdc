@@ -1,0 +1,30 @@
+---
+description: Contexto e restrições do desafio Tecsa Group (Dev Mobile Pleno)
+alwaysApply: true
+---
+
+# Desafio Tecsa — contexto obrigatório
+
+MVP white-label de saúde: core único, duas marcas, fatia vertical do app do nutricionista. Docs: `docs/README.md`. Enunciado: `docs/brief.md`. Escopo: `docs/escopo.md`.
+
+## Stack
+
+- Mobile: React Native + Expo + TypeScript (obrigatório)
+- Backend: NestJS (opção Node do enunciado); REST; porta **9000**
+- DB: PostgreSQL; `docker compose up` sobe backend + banco
+- IA: LLM via API; chave só em env, nunca no commit
+
+## Arquitetura
+
+- Core **desacoplado da marca**; design system por marca (Restyle)
+- Mobile: API tipada; estado e navegação justificados; UI com loading/erro/vazio/sucesso; **lista virtualizada**
+- Flags remotas com **kill switch de IA**; OTA de JS (justificar ferramenta); nativo (biometria); offline da carteira + optimistic update
+- Backend: Controller (só validação) → Service (negócio + LLM) → Repository (banco)
+
+## Nunca
+
+Marca no core; regra de negócio no Controller; JS sem TypeScript; secret de LLM no git; sem testes; lista sem virtualização.
+
+## Entrega
+
+README com decisões e relatório de uso de IA; repositório acessível; vídeo 3–5 min.
