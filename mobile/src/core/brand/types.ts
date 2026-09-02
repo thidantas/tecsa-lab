@@ -14,12 +14,16 @@ export type BrandCopy = {
   aiActionsLabel: string;
   aiActionsHint: string;
   aiActionsGenerate: string;
+  aiActionsDisabled: string;
+  aiActionsError: string;
   patientUnlockTitle: string;
   patientUnlockSubtitle: string;
   patientUnlockAction: string;
   patientUnlockCancel: string;
   patientUnlockPrompt: string;
   patientUnlockError: string;
+  patientBirthDateLabel: string;
+  patientSexLabel: string;
   patientNotesLabel: string;
   patientNotesSave: string;
   patientNotesPlaceholder: string;
