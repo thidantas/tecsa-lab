@@ -78,31 +78,7 @@ Auth, HealthKit, LaunchDarkly, chat de LLM, segundo backend, UI kit pronto. Nutr
 
 O desafio pede este relatório no README. Trabalhei com o agente do Cursor (orquestração de arquivos, diffs e testes). Eu fechei produto, ordem de PRs e o que entra no git.
 
-### O que a IA fez
-
-- Scaffold e camadas Nest (health, patients, flags, `AiActionsService`, `LlmProvider`, kill switch 403).
-- Core Expo: Restyle, domain/infra, perfil hybrid, FlashList, notas otimistas, flags, biometria, splash por marca.
-- Home de entrada, switch demonstrativo, safe area.
-- Suíte Jest (API + RNTL), camada `test-utils`, rascunhos de PR em `docs/prs/`.
-- Texto de ADRs e deste README a partir das decisões que eu confirmei.
-
-### O que eu decidi e revisei
-
-- Stack Nest (não Laravel), Postgres na **5433**, hybrid default para não queimar token na demo.
-- Nomes de branch e ordem de commits (`feat/` vs `feature/`, `test/jest-and-rntl`).
-- UX: notas vazias no seed, data/sexo por extenso, splash que não pode ser o ícone do Expo Go, home que não pode cobrir a status bar.
-- O switch de marca é teatro para o vídeo, não fluxo de consultório.
-- Nada de `project-archives/`, `.env` ou chave de LLM no commit.
-
-### O que a IA não fez
-
-- Vídeo de 3–5 min (T-09.4).
-- Push, merge e e-mail de entrega.
-- Rodar OpenAI de verdade na banca (a demo usa fixture no hybrid).
-- Assinar o que não conferi no aparelho.
-
-Uso: acelerar digitação e navegação no repo. Arquitetura, red flags e o que o avaliador vê na tela foram revisados por mim.
-
 ## Vídeo
 
-Loom 3–5 min (T-09.4): duas marcas no switch, carteira virtualizada, detalhe, offline/nota, kill switch, health na home. O link entra no e-mail de entrega.
+https://github.com/user-attachments/assets/5c79ea16-b3bb-499d-92cc-9e77d9d49397
+
