@@ -15,4 +15,9 @@ export class FlagsService {
 
     return { flags };
   }
+
+  async isEnabled(key: string) {
+    const { flags } = await this.list();
+    return flags[key] === true;
+  }
 }
