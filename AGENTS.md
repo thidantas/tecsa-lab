@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**US-02** — scaffold Expo + Restyle placeholder. US-01 (API) está feita. Não pular scaffold mobile para carteira ou IA.
+**US-03** — backend em camadas (patients, flags, seed). US-01 e US-02 (scaffolds) estão feitas.
 
 ## Restrições (do enunciado)
 

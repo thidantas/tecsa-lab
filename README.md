@@ -15,6 +15,18 @@ docker compose up --build
 - Health: [http://localhost:9000/health](http://localhost:9000/health)
 - Postgres no host: `localhost:5433` (user/senha/db: `tecsa`; internamente o Compose usa `5432`)
 
+## Subir o app (Expo)
+
+Com a API no ar:
+
+```bash
+cd mobile
+cp .env.example .env
+npm start
+```
+
+Web: `npm run web`. Android emulador usa `http://10.0.2.2:9000` se `EXPO_PUBLIC_API_URL` não estiver definido.
+
 Dev local da API (Postgres no Compose):
 
 ```bash

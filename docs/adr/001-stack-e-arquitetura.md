@@ -97,7 +97,7 @@ Domínio mínimo, suficiente para a rubrica:
 Backlog detalhado (epic, stories, tasks): [`../escopo.md`](../escopo.md).
 
 1. **Scaffold backend (US-01)** — Nest + Prisma + Postgres + `GET /health` na 9000. Feito.
-2. **Scaffold mobile (US-02)** — Expo Router + Restyle com um tema placeholder. Próxima.
+2. **Scaffold mobile (US-02)** — Expo Router + Restyle com um tema placeholder. Feito.
 3. **Backend em camadas (US-03)** — migrations (patients, biomarkers, flags), REST correto, seed com ~200 pacientes.
 4. **Core mobile + duas marcas (US-04/05)** — dois temas Restyle, API tipada, FlashList, quatro estados de UI.
 5. **Offline + optimistic (US-06)** — SQLite da carteira; mutação com rollback visual.
