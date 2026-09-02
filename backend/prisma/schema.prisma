@@ -7,4 +7,32 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// Modelos de domínio (patients, biomarkers, flags) entram na fase de camadas.
+model Patient {
+  id          String      @id @default(uuid())
+  name        String
+  birthDate   DateTime    @db.Date
+  sex         String?
+  notes       String?
+  createdAt   DateTime    @default(now())
+  biomarkers  Biomarker[]
+}
+
+model Biomarker {
+  id         String   @id @default(uuid())
+  patientId  String
+  patient    Patient  @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  name       String
+  value      Float
+  unit       String
+  measuredAt DateTime
+  refLow     Float?
+  refHigh    Float?
+
+  @@index([patientId])
+}
+
+model FeatureFlag {
+  key       String   @id
+  enabled   Boolean
+  updatedAt DateTime @updatedAt
+}
