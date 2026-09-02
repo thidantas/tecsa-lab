@@ -2,7 +2,7 @@
 
 Plataforma white-label das marcas de saúde do grupo — fatia vertical do app do nutricionista.
 
-Documentação: [`docs/README.md`](docs/README.md).
+Documentação: [`docs/README.md`](docs/README.md). Labels de PR: [`docs/labels.md`](docs/labels.md).
 
 ## Subir backend e banco
 
