@@ -41,3 +41,7 @@ export function usePatientsRepository() {
 export function useFlagsRepository() {
   return useRepositories().flags;
 }
+
+export function useAiActionsRepository() {
+  return useRepositories().aiActions;
+}
