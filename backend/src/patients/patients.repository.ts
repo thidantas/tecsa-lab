@@ -28,4 +28,14 @@ export class PatientsRepository {
       },
     });
   }
+
+  updateNotes(id: string, notes: string | null) {
+    return this.prisma.patient.update({
+      where: { id },
+      data: { notes },
+      include: {
+        biomarkers: { orderBy: { measuredAt: 'desc' } },
+      },
+    });
+  }
 }
