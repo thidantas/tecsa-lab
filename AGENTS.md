@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**US-09** — testes, README de decisões + uso de IA, vídeo de entrega. US-08 está feita.
+**T-09.3 / T-09.4** — README de decisões + uso de IA, vídeo de entrega. Testes da US-09 estão feitos.
 
 ## Restrições (do enunciado)
 
