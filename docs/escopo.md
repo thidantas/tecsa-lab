@@ -169,16 +169,16 @@ Como plataforma, quero kill switch remoto, biometria no detalhe e OTA de JS just
 
 Como nutricionista, quero 3–5 ações estruturadas a partir dos biomarcadores, e quero que o kill switch impeça a chamada ao LLM.
 
-**Status:** Pendente  
+**Status:** Feito  
 **Fase do plano:** 7  
 **Depende de:** US-03, US-07
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-08.1 | `LlmProvider` | Interface + OpenAI default; chave só em env | Pendente |
-| T-08.2 | `AiActionsService` | Prompt com biomarcadores; JSON estruturado; sem chat | Pendente |
-| T-08.3 | Kill switch na API | Flag off → 403/desligado **sem** chamar o LLM | Pendente |
-| T-08.4 | UI das ações | Lista no detalhe; some quando a flag está off | Pendente |
+| T-08.1 | `LlmProvider` | Interface + OpenAI default; chave só em env | Feito |
+| T-08.2 | `AiActionsService` | Prompt com biomarcadores; JSON estruturado; sem chat | Feito |
+| T-08.3 | Kill switch na API | Flag off → 403/desligado **sem** chamar o LLM | Feito |
+| T-08.4 | UI das ações | Lista no detalhe; some quando a flag está off | Feito |
 
 ---
 
@@ -225,4 +225,4 @@ flowchart LR
   US08 --> US09
 ```
 
-**Agora:** US-08 (ações de IA + kill switch na API). US-07 (flags, biometria, OTA) está feita.
+**Agora:** US-09 (testes, README, vídeo). US-08 (ações de IA) está feita.
