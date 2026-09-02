@@ -16,7 +16,10 @@ export function RootStack() {
         contentStyle: { backgroundColor: colors.background },
       }}
     >
-      <Stack.Screen name="index" options={{ title: identity.copy.homeTitle }} />
+      <Stack.Screen
+        name="index"
+        options={{ headerShown: false, title: identity.copy.homeTitle }}
+      />
       <Stack.Screen
         name="patients/index"
         options={{ title: identity.copy.patientsTitle }}
