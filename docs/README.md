@@ -8,5 +8,6 @@
 | 2 | [adr/001-stack-e-arquitetura.md](adr/001-stack-e-arquitetura.md) | Decisão de stack e arquitetura |
 | 3 | [decisoes.md](decisoes.md) | Log de ADRs |
 | 4 | [escopo.md](escopo.md) | Epic, stories, tasks e ordem de execução |
+| 5 | [labels.md](labels.md) | Labels de PR alinhadas ao Conventional Commits |
 
 Contexto para o agente (raiz do repo): [`../AGENTS.md`](../AGENTS.md).

@@ -59,17 +59,17 @@ Como avaliador, quero `docker compose up` e `GET /health` na porta 9000, para va
 
 Como desenvolvedor, quero o app Expo no ar com TypeScript, Expo Router e **um** tema Restyle, para o core existir antes das marcas e da carteira.
 
-**Status:** Próxima  
+**Status:** Feito  
 **Fase do plano:** 2 — Scaffold mobile  
 **Depende de:** US-01 (API já responde health)
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-02.1 | App Expo + TypeScript | Pasta `mobile/`; SDK atual; TypeScript estrito; `.gitignore` de Expo | Pendente |
-| T-02.2 | Expo Router | Layout raiz; rota placeholder (ex. “Tecsa Lab”); deep link pronto para `/patients/[id]` depois | Pendente |
-| T-02.3 | Restyle placeholder | Um `createTheme` (ainda não vita/nexo); `ThemeProvider`; primitivos `Box` e `Text` | Pendente |
-| T-02.4 | Estrutura white-label vazia | `src/core` e `src/brands` criados; `src/brands` sem segunda marca ainda | Pendente |
-| T-02.5 | Ponte com a API | Base URL `http://localhost:9000` (ou env); chamada tipada a `GET /health` na tela placeholder | Pendente |
+| T-02.1 | App Expo + TypeScript | Pasta `mobile/`; SDK atual; TypeScript estrito; `.gitignore` de Expo | Feito |
+| T-02.2 | Expo Router | Layout raiz; rota placeholder (ex. “Tecsa Lab”); deep link pronto para `/patients/[id]` depois | Feito |
+| T-02.3 | Restyle placeholder | Um `createTheme` (ainda não vita/nexo); `ThemeProvider`; primitivos `Box` e `Text` | Feito |
+| T-02.4 | Estrutura white-label vazia | `src/core` e `src/brands` criados; `src/brands` sem segunda marca ainda | Feito |
+| T-02.5 | Ponte com a API | Base URL `http://localhost:9000` (ou env); chamada tipada a `GET /health` na tela placeholder | Feito |
 
 **Não entra nesta story:** segunda marca, FlashList, SQLite, biometria, flags, IA.
 
@@ -225,4 +225,4 @@ flowchart LR
   US08 --> US09
 ```
 
-**Agora:** US-02 (scaffold Expo). US-01 está fechada.
+**Agora:** US-03 (domínio na API). US-01 e US-02 estão fechadas.
