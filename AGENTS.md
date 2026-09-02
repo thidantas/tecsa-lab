@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**US-05** — carteira (FlashList, quatro estados, detalhe). Domain (repository + operations) e infra HTTP estão feitos.
+**US-08** — ações de IA estruturadas + kill switch na API. US-07 está feita.
 
 ## Restrições (do enunciado)
 

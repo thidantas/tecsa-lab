@@ -117,7 +117,7 @@ Como grupo Tecsa, quero trocar vita/nexo em runtime sem rebuild, para provar cor
 
 Como nutricionista, quero buscar e abrir a carteira com estados de UI e lista virtualizada, para operar uma base grande.
 
-**Status:** Pendente  
+**Status:** Feito  
 **Fase do plano:** 4  
 **Depende de:** US-03, US-04
 
@@ -125,9 +125,9 @@ Como nutricionista, quero buscar e abrir a carteira com estados de UI e lista vi
 | --- | --- | --- | --- |
 | T-05.1 | API tipada | Interfaces de repository no domain; implementação HTTP na infra | Feito |
 | T-05.2 | TanStack Query | Operations no domain (`usePatientsQuery`, `usePatientQuery`) | Feito |
-| T-05.3 | FlashList | Virtualização (red flag se faltar) | Pendente |
-| T-05.4 | Estados de UI | Loading, vazio, erro, sucesso | Pendente |
-| T-05.5 | Detalhe | Biomarcadores + notas | Pendente |
+| T-05.3 | FlashList | Virtualização (red flag se faltar) | Feito |
+| T-05.4 | Estados de UI | Loading, vazio, erro, sucesso | Feito |
+| T-05.5 | Detalhe | Biomarcadores + notas | Feito |
 
 ---
 
@@ -135,14 +135,14 @@ Como nutricionista, quero buscar e abrir a carteira com estados de UI e lista vi
 
 Como nutricionista, quero ver a carteira sem rede e marcar nota/ação com rollback visual, para não perder o fluxo no consultório.
 
-**Status:** Pendente  
+**Status:** Feito  
 **Fase do plano:** 5  
 **Depende de:** US-05
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-06.1 | SQLite da carteira | Persistência local de lista e detalhe | Pendente |
-| T-06.2 | Optimistic update | Mutação imediata + rollback se a API falhar | Pendente |
+| T-06.1 | SQLite da carteira | Persistência local de lista e detalhe | Feito |
+| T-06.2 | Optimistic update | Mutação imediata + rollback se a API falhar | Feito |
 
 ---
 
@@ -152,16 +152,16 @@ Como nutricionista, quero ver a carteira sem rede e marcar nota/ação com rollb
 
 Como plataforma, quero kill switch remoto, biometria no detalhe e OTA de JS justificado, para cobrir release sem vendor extra.
 
-**Status:** Pendente  
+**Status:** Feito  
 **Fase do plano:** 6  
 **Depende de:** US-03, US-05
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-07.1 | Cliente de flags | `GET /v1/flags`; cache local do último valor | Pendente |
-| T-07.2 | Kill switch na UI | `ai_actions=false` esconde geração | Pendente |
-| T-07.3 | Biometria | `expo-local-authentication` no detalhe do paciente (não HealthKit) | Pendente |
-| T-07.4 | EAS Update | `expo-updates` no `app.json`; justificativa no README (publicar OTA é opcional) | Pendente |
+| T-07.1 | Cliente de flags | `GET /v1/flags`; cache local do último valor | Feito |
+| T-07.2 | Kill switch na UI | `ai_actions=false` esconde geração | Feito |
+| T-07.3 | Biometria | `expo-local-authentication` no detalhe do paciente (não HealthKit) | Feito |
+| T-07.4 | EAS Update | `expo-updates` no `app.json`; justificativa no README (publicar OTA é opcional) | Feito |
 
 ---
 
@@ -225,4 +225,4 @@ flowchart LR
   US08 --> US09
 ```
 
-**Agora:** US-05 (carteira). T-05.1 e T-05.2 feitos. Faltam FlashList, estados de UI e detalhe.
+**Agora:** US-08 (ações de IA + kill switch na API). US-07 (flags, biometria, OTA) está feita.

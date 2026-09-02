@@ -13,18 +13,23 @@
 - **`src/infra`**
   - `api/` — client HTTP (Axios, URL, erros de rede). Transporte, não regra de tela.
   - `adapters/` — DTO do backend → model do domain. Só ajuste de dado.
-  - `repositories/` — uma pasta por backend (`tecsaNestApi`, `inMemoryApi`; `supabaseApi` quando existir). Cada uma implementa as mesmas interfaces.
+  - `repositories/` — uma pasta por backend (`hybridApi`, `tecsaNestApi`, `inMemoryApi`, `sqliteApi` como store local). Cada uma implementa as mesmas interfaces (sqlite é cache, não perfil sozinho).
   - `profiles/` — escolhe o backend (`EXPO_PUBLIC_API_PROFILE`) e injeta no `RepositoriesProvider`.
 
 A UI chama operation → interface. Qual API responde é o perfil.
+
+Offline da carteira (US-06): o perfil `hybrid` tenta Nest, grava no SQLite o que já foi carregado e, em falha de rede, lê o cache. Nota só persiste no servidor (`PATCH`); a mutation do Query atualiza a UI na hora e faz rollback se o PATCH falhar.
+
+Flags (US-07): o mesmo híbrido cacheia `ai_actions`. Sem valor local e sem rede, a query falha e a UI trata como off (fail-closed).
 
 ## Perfis
 
 | Perfil | Pasta |
 | --- | --- |
-| `tecsaNest` (default) | `repositories/tecsaNestApi` — Nest na 9000 |
+| `hybrid` (default) | Nest na 9000 + SQLite da carteira |
+| `tecsaNest` | `repositories/tecsaNestApi` — só HTTP |
 | `inMemory` | `repositories/inMemoryApi` — fixture local |
 
 ## Por quê
 
-O repository permanece agnóstico. Trocar Nest por outro backend é pasta + perfil novos, sem mudar operation nem tela. O adapter isola o formato do payload; o client fica na `api`.
+O repository permanece agnóstico. Trocar Nest por outro backend é pasta + perfil novos, sem mudar operation nem tela. O adapter isola o formato do payload; o client fica na `api`. Offline não clona o Postgres: só o que o nutricionista já abriu.
