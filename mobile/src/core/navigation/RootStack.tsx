@@ -1,23 +1,26 @@
-import { useTheme } from '@shopify/restyle';
 import { Stack } from 'expo-router';
 
 import { useBrand } from '@/core/brand';
-import type { Theme } from '@/core/theme';
+import { useAppTheme } from '@/core/theme';
 
 export function RootStack() {
-  const theme = useTheme<Theme>();
+  const { colors } = useAppTheme();
   const { identity } = useBrand();
 
   return (
     <Stack
       screenOptions={{
         headerShadowVisible: false,
-        headerStyle: { backgroundColor: theme.colors.background },
-        headerTintColor: theme.colors.text,
-        contentStyle: { backgroundColor: theme.colors.background },
+        headerStyle: { backgroundColor: colors.background },
+        headerTintColor: colors.text,
+        contentStyle: { backgroundColor: colors.background },
       }}
     >
       <Stack.Screen name="index" options={{ title: identity.copy.homeTitle }} />
+      <Stack.Screen
+        name="patients/index"
+        options={{ title: identity.copy.patientsTitle }}
+      />
       <Stack.Screen
         name="patients/[id]"
         options={{ title: identity.copy.patientDetailTitle }}

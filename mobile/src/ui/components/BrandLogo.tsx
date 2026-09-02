@@ -1,15 +1,13 @@
-import { useTheme } from '@shopify/restyle';
-
 import { BrandMark } from '@/brands/BrandMark';
 import { useBrand } from '@/core/brand';
-import type { Theme } from '@/core/theme';
+import { useAppTheme } from '@/core/theme';
 
 import { Box } from './Box';
 import { Text } from './Text';
 
 export function BrandLogo() {
   const { identity } = useBrand();
-  const theme = useTheme<Theme>();
+  const { colors } = useAppTheme();
 
   return (
     <Box flexDirection="row" alignItems="center" gap="s8">
@@ -21,7 +19,7 @@ export function BrandLogo() {
         alignItems="center"
         justifyContent="center"
       >
-        <BrandMark brandId={identity.id} size={26} color={theme.colors.accent} />
+        <BrandMark brandId={identity.id} size={26} color={colors.accent} />
       </Box>
       <Text variant="title28">{identity.logo.wordmark}</Text>
     </Box>
