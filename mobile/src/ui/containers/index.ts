@@ -1,3 +1,5 @@
+export { BrandSwitch } from "./BrandSwitch";
+export { Home } from "./home/Home";
 export { QueryState } from "./QueryState";
 export { Screen } from "./Screen";
 export { ScreenHeader } from "./ScreenHeader";

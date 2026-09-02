@@ -7,11 +7,12 @@ import { Box } from '../components/Box';
 
 type ScreenProps = {
   children: ReactNode;
+  safeTop?: boolean;
 };
 
-export function Screen({ children }: ScreenProps) {
+export function Screen({ children, safeTop = false }: ScreenProps) {
   const { spacing } = useAppTheme();
-  const { bottom, left, right } = useAppSafeArea();
+  const { top, bottom, left, right } = useAppSafeArea();
 
   return (
     <Box
@@ -19,7 +20,7 @@ export function Screen({ children }: ScreenProps) {
       backgroundColor="background"
       gap="s16"
       style={{
-        paddingTop: spacing.s24,
+        paddingTop: spacing.s24 + (safeTop ? top : 0),
         paddingRight: spacing.s24 + right,
         paddingBottom: spacing.s24 + bottom,
         paddingLeft: spacing.s24 + left,

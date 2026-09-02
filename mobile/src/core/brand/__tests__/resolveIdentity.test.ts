@@ -8,6 +8,7 @@ describe('resolveIdentity()', () => {
     expect(vita.id).toBe('vita');
     expect(nexo.id).toBe('nexo');
     expect(vita.copy.appName).not.toBe(nexo.copy.appName);
+    expect(vita.copy.homeGreeting).not.toBe(nexo.copy.homeGreeting);
     expect(vita.copy.aiActionsLabel).not.toBe(nexo.copy.aiActionsLabel);
   });
 

@@ -6,11 +6,18 @@ export type BrandCopy = {
   appName: string;
   homeTitle: string;
   homeSubtitle: string;
+  homeGreeting: string;
+  homeWalletHint: string;
+  homePatientCount: string;
   patientsTitle: string;
   patientDetailTitle: string;
   patientDetailPlaceholder: string;
   patientsEmpty: string;
   healthCardTitle: string;
+  healthOk: string;
+  healthDown: string;
+  healthPending: string;
+  healthRetry: string;
   aiActionsLabel: string;
   aiActionsHint: string;
   aiActionsGenerate: string;
