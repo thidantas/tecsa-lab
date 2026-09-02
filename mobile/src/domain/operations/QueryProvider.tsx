@@ -13,6 +13,10 @@ export function QueryProvider({ children }: QueryProviderProps) {
           queries: {
             retry: 1,
             staleTime: 30_000,
+            networkMode: 'always',
+          },
+          mutations: {
+            networkMode: 'always',
           },
         },
       }),

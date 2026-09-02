@@ -23,12 +23,14 @@ type ButtonProps = TouchableOpacityBoxProps & {
   title: string;
   onPress: () => void;
   variant?: ButtonVariant;
+  disabled?: boolean;
 };
 
 export function Button({
   title,
   onPress,
   variant = 'primary',
+  disabled = false,
   ...otherProps
 }: ButtonProps) {
   const buttonProps = buttonColors[variant];
@@ -37,6 +39,8 @@ export function Button({
     <TouchableOpacityBox
       {...otherProps}
       onPress={onPress}
+      disabled={disabled}
+      style={{ opacity: disabled ? 0.5 : 1 }}
       backgroundColor={buttonProps.backgroundColor}
       borderRadius="default"
       padding="default"

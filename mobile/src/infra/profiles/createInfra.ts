@@ -1,5 +1,6 @@
 import type { Repositories } from '@/domain/repositories/types';
 
+import { createHybridProfile } from './createHybridProfile';
 import { createInMemoryProfile } from './createInMemoryProfile';
 import { createTecsaNestProfile } from './createTecsaNestProfile';
 import { API_PROFILES, type ApiProfile } from './types';
@@ -15,13 +16,15 @@ export function resolveApiProfile(): ApiProfile {
     return fromEnv;
   }
 
-  return 'tecsaNest';
+  return 'hybrid';
 }
 
 export function createInfra(
   profile: ApiProfile = resolveApiProfile(),
 ): Repositories {
   switch (profile) {
+    case 'hybrid':
+      return createHybridProfile();
     case 'tecsaNest':
       return createTecsaNestProfile();
     case 'inMemory':
