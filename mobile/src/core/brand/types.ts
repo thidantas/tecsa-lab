@@ -12,6 +12,18 @@ export type BrandCopy = {
   patientsEmpty: string;
   healthCardTitle: string;
   aiActionsLabel: string;
+  aiActionsHint: string;
+  aiActionsGenerate: string;
+  patientUnlockTitle: string;
+  patientUnlockSubtitle: string;
+  patientUnlockAction: string;
+  patientUnlockCancel: string;
+  patientUnlockPrompt: string;
+  patientUnlockError: string;
+  patientNotesLabel: string;
+  patientNotesSave: string;
+  patientNotesPlaceholder: string;
+  patientNotesError: string;
 };
 
 export type BrandLogo = {

@@ -37,3 +37,7 @@ export function useHealthRepository() {
 export function usePatientsRepository() {
   return useRepositories().patients;
 }
+
+export function useFlagsRepository() {
+  return useRepositories().flags;
+}

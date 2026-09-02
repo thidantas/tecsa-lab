@@ -1,4 +1,7 @@
 export const queryKeys = {
+  flags: {
+    all: ['flags'] as const,
+  },
   health: {
     all: ['health'] as const,
   },

@@ -7,8 +7,14 @@
     "icon": "./assets/images/icon.png",
     "scheme": "tecsalab",
     "userInterfaceStyle": "automatic",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Confirmar para abrir o registro do paciente."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +31,14 @@
     },
     "plugins": [
       "expo-router",
+      "expo-sqlite",
+      "expo-updates",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Confirmar para abrir o registro do paciente."
+        }
+      ],
       [
         "expo-splash-screen",
         {
