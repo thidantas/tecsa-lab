@@ -1,4 +1,3 @@
-import { useTheme } from '@shopify/restyle';
 import { Pressable } from 'react-native';
 
 import { AlertIcon } from '../../../assets/icons/AlertIcon';
@@ -13,7 +12,7 @@ import { SearchIcon } from '../../../assets/icons/SearchIcon';
 import { SparkleIcon } from '../../../assets/icons/SparkleIcon';
 import { UserIcon } from '../../../assets/icons/UserIcon';
 import { UsersIcon } from '../../../assets/icons/UsersIcon';
-import type { Theme, ThemeColors } from '@/core/theme';
+import { useAppTheme, type ThemeColors } from '@/core/theme';
 
 const iconRegistry = {
   alert: AlertIcon,
@@ -45,16 +44,16 @@ export function Icon({
   size,
   onPress,
 }: IconProps) {
-  const theme = useTheme<Theme>();
+  const { colors } = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
   if (onPress) {
     return (
       <Pressable hitSlop={10} onPress={onPress} testID={name}>
-        <SVGIcon iconColor={theme.colors[color]} size={size} />
+        <SVGIcon iconColor={colors[color]} size={size} />
       </Pressable>
     );
   }
 
-  return <SVGIcon iconColor={theme.colors[color]} size={size} />;
+  return <SVGIcon iconColor={colors[color]} size={size} />;
 }

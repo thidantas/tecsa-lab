@@ -1,18 +1,10 @@
 import { useLocalSearchParams } from 'expo-router';
 
-import { useBrand } from '@/core/brand';
-import { Box, Text } from '@/ui/components';
+import { PatientDetail } from '@/ui/containers';
 
-export default function PatientPlaceholderScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
-  const { identity } = useBrand();
+export default function PatientDetailScreen() {
+  const param = useLocalSearchParams<{ id: string | string[] }>().id;
+  const id = Array.isArray(param) ? (param[0] ?? '') : (param ?? '');
 
-  return (
-    <Box flex={1} backgroundColor="background" padding="s24" gap="s8">
-      <Text variant="title28">{identity.copy.patientDetailTitle}</Text>
-      <Text variant="text14" color="textMuted">
-        {identity.copy.patientDetailPlaceholder} /patients/{id}
-      </Text>
-    </Box>
-  );
+  return <PatientDetail id={id} />;
 }
