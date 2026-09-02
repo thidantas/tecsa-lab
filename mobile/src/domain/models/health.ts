@@ -1,4 +1,4 @@
-export type HealthResponse = {
+export type HealthStatus = {
   status: 'ok' | 'error';
   database: 'up' | 'down';
 };
