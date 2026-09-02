@@ -6,6 +6,7 @@ import { useAppTheme } from '@/core/theme';
 import { useUpdatePatientNotes } from '@/domain';
 import type { PatientDetail } from '@/domain/models/patients';
 
+import { Box } from '../../components/Box';
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
 import { Icon } from '../../components/Icon';
@@ -17,7 +18,7 @@ type PatientNotesCardProps = {
 
 export function PatientNotesCard({ patient }: PatientNotesCardProps) {
   const { identity } = useBrand();
-  const { colors, textVariants, spacing, borderRadii } = useAppTheme();
+  const { colors, textVariants } = useAppTheme();
   const mutation = useUpdatePatientNotes();
   const [draft, setDraft] = useState(patient.notes ?? '');
 
@@ -31,25 +32,35 @@ export function PatientNotesCard({ patient }: PatientNotesCardProps) {
     <Card gap="s8">
       <Icon name="note" color="accent" size={20} />
       <Text variant="text16">{identity.copy.patientNotesLabel}</Text>
-      <TextInput
-        value={draft}
-        onChangeText={setDraft}
-        placeholder={identity.copy.patientNotesPlaceholder}
-        placeholderTextColor={colors.textMuted}
-        multiline
-        textAlignVertical="top"
-        style={{
-          minHeight: 96,
-          color: colors.text,
-          fontFamily: textVariants.text16.fontFamily,
-          fontSize: textVariants.text16.fontSize,
-          lineHeight: textVariants.text16.lineHeight,
-          borderWidth: 1,
-          borderColor: colors.border,
-          borderRadius: borderRadii.default,
-          padding: spacing.s12,
-        }}
-      />
+      <Box
+        borderWidth={1}
+        borderColor="border"
+        borderRadius="default"
+        padding="s12"
+        minHeight={96}
+      >
+        <TextInput
+          value={draft}
+          onChangeText={setDraft}
+          placeholder={identity.copy.patientNotesPlaceholder}
+          placeholderTextColor={colors.textMuted}
+          multiline
+          textAlignVertical="top"
+          underlineColorAndroid="transparent"
+          selectionColor={colors.accent}
+          style={{
+            color: colors.text,
+            fontFamily: textVariants.text16.fontFamily,
+            fontSize: textVariants.text16.fontSize,
+            lineHeight: textVariants.text16.lineHeight,
+            padding: 0,
+            margin: 0,
+            borderWidth: 0,
+            backgroundColor: 'transparent',
+            includeFontPadding: false,
+          }}
+        />
+      </Box>
       <Button
         title={identity.copy.patientNotesSave}
         disabled={!dirty || mutation.isPending}
