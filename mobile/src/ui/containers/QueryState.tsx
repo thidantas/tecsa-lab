@@ -24,7 +24,7 @@ export function QueryState({
   if (isPending) {
     return (
       <Box flex={1} justifyContent="center" alignItems="center">
-        <ActivityIndicator />
+        <ActivityIndicator testID="query-state-pending" />
       </Box>
     );
   }

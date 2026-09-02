@@ -32,6 +32,7 @@ export function SearchField({
     >
       <Icon name="search" color="textMuted" size={20} />
       <TextInput
+        testID="search-input"
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}

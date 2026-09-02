@@ -12,7 +12,9 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:push": "prisma db push",
-    "prisma:seed": "prisma db seed"
+    "prisma:seed": "prisma db seed",
+    "test": "jest",
+    "test:e2e": "jest --config ./test/jest-e2e.json --runInBand"
   },
   "prisma": {
     "seed": "npx ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -30,9 +32,15 @@
   "devDependencies": {
     "@nestjs/cli": "^11.0.10",
     "@nestjs/schematics": "^11.0.7",
+    "@nestjs/testing": "^11.1.6",
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.18.0",
+    "@types/supertest": "^7.2.1",
+    "jest": "^30.5.1",
     "prisma": "^6.15.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }

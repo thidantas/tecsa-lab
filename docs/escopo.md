@@ -192,8 +192,8 @@ Como avaliador, quero testes que protejam camadas e kill switch, e um README que
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-09.1 | Testes Nest | Unit em Services + 1 e2e (health ou patients) | Pendente |
-| T-09.2 | Testes mobile | Brand resolver + kill switch | Pendente |
+| T-09.1 | Testes Nest | Unit em Services + 1 e2e (health ou patients) | Feito |
+| T-09.2 | Testes mobile | Brand resolver + kill switch | Feito |
 | T-09.3 | README final | Decisões (estado, nav, OTA, flags, offline, LLM, backend) + relatório de IA | Pendente |
 | T-09.4 | Vídeo | Loom 3–5 min: duas marcas, carteira, offline, kill switch, health | Pendente |
 
@@ -225,4 +225,4 @@ flowchart LR
   US08 --> US09
 ```
 
-**Agora:** US-09 (testes, README, vídeo). US-08 (ações de IA) está feita.
+**Agora:** T-09.3 (README de decisões + uso de IA) e T-09.4 (vídeo). Testes da US-09 estão feitos.
