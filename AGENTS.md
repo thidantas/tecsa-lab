@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**T-09.3 / T-09.4** — README de decisões + uso de IA, vídeo de entrega. Testes da US-09 estão feitos.
+**T-09.4** — vídeo de entrega (Loom 3–5 min). README de decisões e testes da US-09 estão feitos.
 
 ## Restrições (do enunciado)
 
