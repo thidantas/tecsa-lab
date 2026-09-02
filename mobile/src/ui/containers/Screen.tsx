@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-import { Box } from '../components/Box';
+import { Box } from "../components/Box";
 
 type ScreenProps = {
   children: ReactNode;

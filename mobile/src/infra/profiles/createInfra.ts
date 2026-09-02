@@ -1,9 +1,9 @@
-import type { Repositories } from '@/domain/repositories/types';
+import type { Repositories } from "@/domain/repositories/types";
 
-import { createHybridProfile } from './createHybridProfile';
-import { createInMemoryProfile } from './createInMemoryProfile';
-import { createTecsaNestProfile } from './createTecsaNestProfile';
-import { API_PROFILES, type ApiProfile } from './types';
+import { createHybridProfile } from "./createHybridProfile";
+import { createInMemoryProfile } from "./createInMemoryProfile";
+import { createTecsaNestProfile } from "./createTecsaNestProfile";
+import { API_PROFILES, type ApiProfile } from "./types";
 
 function isApiProfile(value: string): value is ApiProfile {
   return API_PROFILES.includes(value as ApiProfile);
@@ -16,18 +16,18 @@ export function resolveApiProfile(): ApiProfile {
     return fromEnv;
   }
 
-  return 'hybrid';
+  return "hybrid";
 }
 
 export function createInfra(
   profile: ApiProfile = resolveApiProfile(),
 ): Repositories {
   switch (profile) {
-    case 'hybrid':
+    case "hybrid":
       return createHybridProfile();
-    case 'tecsaNest':
+    case "tecsaNest":
       return createTecsaNestProfile();
-    case 'inMemory':
+    case "inMemory":
       return createInMemoryProfile();
   }
 }

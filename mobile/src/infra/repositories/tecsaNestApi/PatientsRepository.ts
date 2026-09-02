@@ -23,5 +23,11 @@ export function createTecsaNestPatientsRepository(
       const dto = await http.get<PatientDetailDto>(`/v1/patients/${id}`);
       return toPatientDetail(dto);
     },
+    async updateNotes(id, notes) {
+      const dto = await http.patch<PatientDetailDto>(`/v1/patients/${id}`, {
+        notes,
+      });
+      return toPatientDetail(dto);
+    },
   };
 }

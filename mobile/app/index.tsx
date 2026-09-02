@@ -1,10 +1,10 @@
-import { router, type Href } from 'expo-router';
-import { ActivityIndicator } from 'react-native';
+import { router, type Href } from "expo-router";
+import { ActivityIndicator } from "react-native";
 
-import { useBrand } from '@/core/brand';
-import { useHealthQuery } from '@/domain';
-import { Button, Card, Text } from '@/ui/components';
-import { Screen, ScreenHeader } from '@/ui/containers';
+import { useBrand } from "@/core/brand";
+import { useHealthQuery } from "@/domain";
+import { Button, Card, Text } from "@/ui/components";
+import { Screen, ScreenHeader } from "@/ui/containers";
 
 export default function HomeScreen() {
   const { identity } = useBrand();
@@ -26,7 +26,7 @@ export default function HomeScreen() {
           <Text color="danger">
             {health.error instanceof Error
               ? health.error.message
-              : 'Falha ao consultar a API'}
+              : "Falha ao consultar a API"}
           </Text>
         ) : null}
       </Card>
@@ -34,7 +34,7 @@ export default function HomeScreen() {
       <Button
         title={identity.copy.patientsTitle}
         onPress={() => {
-          router.push('/patients' as Href);
+          router.push("/patients" as Href);
         }}
       />
     </Screen>
