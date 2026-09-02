@@ -81,16 +81,16 @@ Como desenvolvedor, quero o app Expo no ar com TypeScript, Expo Router e **um** 
 
 Como nutricionista (via API), quero listar e ver pacientes com biomarcadores, e ler flags remotas, para o app consumir um contrato real.
 
-**Status:** Pendente  
+**Status:** Feito  
 **Fase do plano:** 3  
 **Depende de:** US-01
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-03.1 | Schema e migrations | Models `Patient`, `Biomarker`, `FeatureFlag`; JSONB onde couber; Prisma migrate | Pendente |
-| T-03.2 | Módulo patients | Controller (validação) → Service → Repository (Prisma atrás do repo); REST e status corretos | Pendente |
-| T-03.3 | Módulo flags | `GET /v1/flags`; flag `ai_actions` (kill switch) | Pendente |
-| T-03.4 | Seed | ~200 pacientes para a lista virtualizada não ser teatro | Pendente |
+| T-03.1 | Schema e migrations | Models `Patient`, `Biomarker`, `FeatureFlag`; JSONB onde couber; Prisma migrate | Feito |
+| T-03.2 | Módulo patients | Controller (validação) → Service → Repository (Prisma atrás do repo); REST e status corretos | Feito |
+| T-03.3 | Módulo flags | `GET /v1/flags`; flag `ai_actions` (kill switch) | Feito |
+| T-03.4 | Seed | ~200 pacientes para a lista virtualizada não ser teatro | Feito |
 
 ---
 
@@ -123,8 +123,8 @@ Como nutricionista, quero buscar e abrir a carteira com estados de UI e lista vi
 
 | ID | Task | Subtasks | Status |
 | --- | --- | --- | --- |
-| T-05.1 | API tipada | Cliente TS dos endpoints de patients | Pendente |
-| T-05.2 | TanStack Query | Lista e detalhe; cache/retry | Pendente |
+| T-05.1 | API tipada | Interfaces de repository no domain; implementação HTTP na infra | Feito |
+| T-05.2 | TanStack Query | Operations no domain (`usePatientsQuery`, `usePatientQuery`) | Feito |
 | T-05.3 | FlashList | Virtualização (red flag se faltar) | Pendente |
 | T-05.4 | Estados de UI | Loading, vazio, erro, sucesso | Pendente |
 | T-05.5 | Detalhe | Biomarcadores + notas | Pendente |
@@ -225,4 +225,4 @@ flowchart LR
   US08 --> US09
 ```
 
-**Agora:** US-03 (domínio na API). US-01 e US-02 estão fechadas.
+**Agora:** US-05 (carteira). T-05.1 e T-05.2 feitos. Faltam FlashList, estados de UI e detalhe.

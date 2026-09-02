@@ -17,7 +17,7 @@ MVP white-label de saúde: core único, duas marcas, fatia vertical do app do nu
 ## Arquitetura
 
 - Core **desacoplado da marca**; design system por marca (Restyle)
-- Mobile: API tipada; estado e navegação justificados; UI com loading/erro/vazio/sucesso; **lista virtualizada**
+- Mobile: `src/domain` (interfaces de repository + operations TanStack); `src/infra` (`api` client, adapters de DTO, repositories por backend); UI com loading/erro/vazio/sucesso; **lista virtualizada**
 - Flags remotas com **kill switch de IA**; OTA de JS (justificar ferramenta); nativo (biometria); offline da carteira + optimistic update
 - Backend: Controller (só validação) → Service (negócio + LLM) → Repository (banco)
 

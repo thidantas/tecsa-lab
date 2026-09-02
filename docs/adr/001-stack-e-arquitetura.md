@@ -85,7 +85,7 @@ Domínio mínimo, suficiente para a rubrica:
 
 ## Mapa de pastas (alvo)
 
-- `mobile/` — Expo app: `src/core` (api, query, db, flags, navigation, primitivos Restyle), `src/brands` (dois `createTheme` + logo/copy), `src/features/patients`
+- `mobile/` — Expo app: `src/domain` (interfaces de repository + operations TanStack), `src/infra` (`api` client, adapters de DTO, repositories por backend, perfil), `src/core` (brand, theme, navigation), `src/brands` (tema + logo/copy), `src/features/patients`
 - `backend/` — NestJS: `patients`, `flags`, `ai-actions` cada um com `controller` / `service` / `repository`
 - `docker-compose.yml` — `api:9000`, `postgres:5432`
 - `docs/` — índice, brief, escopo e ADRs
@@ -98,7 +98,7 @@ Backlog detalhado (epic, stories, tasks): [`../escopo.md`](../escopo.md).
 
 1. **Scaffold backend (US-01)** — Nest + Prisma + Postgres + `GET /health` na 9000. Feito.
 2. **Scaffold mobile (US-02)** — Expo Router + Restyle com um tema placeholder. Feito.
-3. **Backend em camadas (US-03)** — migrations (patients, biomarkers, flags), REST correto, seed com ~200 pacientes.
+3. **Backend em camadas (US-03)** — migrations (patients, biomarkers, flags), REST correto, seed com ~200 pacientes. Feito.
 4. **Core mobile + duas marcas (US-04/05)** — dois temas Restyle, API tipada, FlashList, quatro estados de UI.
 5. **Offline + optimistic (US-06)** — SQLite da carteira; mutação com rollback visual.
 6. **Plataforma (US-07)** — flags + kill switch, biometria no detalhe, `expo-updates` justificado.

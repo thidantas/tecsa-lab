@@ -4,7 +4,7 @@ GitHub labels alinhadas ao Conventional Commits do repo:
 
 `type(scope): description`
 
-Na PR, use **1 type** (obrigatório) e **1–2 scopes** (opcional). O type da label deve bater com o type da branch e dos commits principais.
+Na PR, use **1 type** (obrigatório) e **1–2 scopes** (opcional). O type da label deve bater com o type da branch e dos commits principais. Rascunho da descrição: [`prs/`](prs/README.md).
 
 ## Type
 
