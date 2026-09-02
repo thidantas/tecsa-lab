@@ -6,5 +6,6 @@ import { FlagsService } from './flags.service';
 @Module({
   controllers: [FlagsController],
   providers: [FlagsService, FlagsRepository],
+  exports: [FlagsService],
 })
 export class FlagsModule {}

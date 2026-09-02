@@ -88,7 +88,7 @@ async function main() {
       name: `${first} ${last}`,
       birthDate: new Date(Date.UTC(year, index % 12, (index % 27) + 1)),
       sex,
-      notes: index % 7 === 0 ? 'Retorno em 8 semanas.' : null,
+      notes: null,
     };
   });
 

@@ -72,8 +72,10 @@ export function createHttpClient(): HttpClient {
         .get<T>(path, config as AxiosRequestConfig)
         .then((response) => response.data);
     },
-    post<T>(path: string, body?: unknown) {
-      return client.post<T>(path, body).then((response) => response.data);
+    post<T>(path: string, body?: unknown, config?: HttpRequestConfig) {
+      return client
+        .post<T>(path, body, config as AxiosRequestConfig)
+        .then((response) => response.data);
     },
     put<T>(path: string, body?: unknown) {
       return client.put<T>(path, body).then((response) => response.data);

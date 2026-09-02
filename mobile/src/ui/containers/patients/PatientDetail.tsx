@@ -16,6 +16,7 @@ import { AiActionsCard } from './AiActionsCard';
 import { BiomarkerCard } from './BiomarkerCard';
 import { PatientLock } from './PatientLock';
 import { PatientNotesCard } from './PatientNotesCard';
+import { sexLabel } from './sexLabel';
 
 type PatientDetailProps = {
   id: string;
@@ -30,7 +31,9 @@ function queryErrorMessage(error: unknown) {
 }
 
 function PatientDetailBody({ patient }: { patient: PatientDetailModel }) {
+  const { identity } = useBrand();
   const { spacing } = useAppTheme();
+  const sex = sexLabel(patient.sex);
 
   return (
     <ScrollView
@@ -38,10 +41,16 @@ function PatientDetailBody({ patient }: { patient: PatientDetailModel }) {
       contentContainerStyle={{ gap: spacing.s16, paddingBottom: spacing.s24 }}
       showsVerticalScrollIndicator={false}
     >
-      <Text variant="text14" color="textMuted">
-        {formatDate(patient.birthDate)}
-        {patient.sex ? ` · ${patient.sex}` : ''}
-      </Text>
+      <Box gap="s4">
+        <Text variant="text14" color="textMuted">
+          {identity.copy.patientBirthDateLabel}: {formatDate(patient.birthDate)}
+        </Text>
+        {sex ? (
+          <Text variant="text14" color="textMuted">
+            {identity.copy.patientSexLabel}: {sex}
+          </Text>
+        ) : null}
+      </Box>
 
       <PatientNotesCard patient={patient} />
 
@@ -55,7 +64,7 @@ function PatientDetailBody({ patient }: { patient: PatientDetailModel }) {
         ))
       )}
 
-      <AiActionsCard />
+      <AiActionsCard patientId={patient.id} />
     </ScrollView>
   );
 }

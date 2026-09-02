@@ -36,6 +36,7 @@ export function SearchField({
         onChangeText={onChangeText}
         placeholder={placeholder}
         placeholderTextColor={colors.textMuted}
+        underlineColorAndroid="transparent"
         autoCorrect={false}
         autoCapitalize="none"
         style={{

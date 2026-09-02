@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**US-08** — ações de IA estruturadas + kill switch na API. US-07 está feita.
+**US-09** — testes, README de decisões + uso de IA, vídeo de entrega. US-08 está feita.
 
 ## Restrições (do enunciado)
 

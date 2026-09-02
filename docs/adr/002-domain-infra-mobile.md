@@ -22,6 +22,8 @@ Offline da carteira (US-06): o perfil `hybrid` tenta Nest, grava no SQLite o que
 
 Flags (US-07): o mesmo híbrido cacheia `ai_actions`. Sem valor local e sem rede, a query falha e a UI trata como off (fail-closed).
 
+Ações de IA (US-08): no `hybrid` a geração usa o fixture `inMemory` (card ativo, sem token). `tecsaNest` chama `POST /v1/patients/:id/ai-actions`. Flag off esconde o card; na API, 403 antes do `LlmProvider`.
+
 ## Perfis
 
 | Perfil | Pasta |
