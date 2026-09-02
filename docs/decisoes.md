@@ -5,3 +5,4 @@ Log das decisões de arquitetura e stack deste desafio. Índice: [`README.md`](R
 | ID | Data | Decisão | Status |
 | --- | --- | --- | --- |
 | [ADR-001](adr/001-stack-e-arquitetura.md) | 2026-09-01 | Node/Nest + Expo + Restyle, dentro da stack permitida no enunciado | Aceita |
+| [ADR-002](adr/002-domain-infra-mobile.md) | 2026-09-02 | Domain (contratos) + infra (repos HTTP e perfil de API) no mobile | Aceita |

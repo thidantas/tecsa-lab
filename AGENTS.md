@@ -10,7 +10,7 @@ Leia nesta ordem antes de implementar:
 
 ## Próximo trabalho
 
-**US-03** — backend em camadas (patients, flags, seed). US-01 e US-02 (scaffolds) estão feitas.
+**US-05** — carteira (FlashList, quatro estados, detalhe). Domain (repository + operations) e infra HTTP estão feitos.
 
 ## Restrições (do enunciado)
 
